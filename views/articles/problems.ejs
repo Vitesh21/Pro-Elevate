@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problems</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .tags {
+            flex: 1;
+            background-color: #fff;
+            padding: 20px;
+            border-right: 1px solid #ccc;
+        }
+        .tag {
+            margin-bottom: 10px;
+            cursor: pointer;
+            color: #333;
+        }
+        .tag:hover {
+            color: #ff7f00;
+        }
+        .problems {
+            flex: 3;
+            background-color: #fff;
+            padding: 20px;
+        }
+        .problem {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+        }
+        .problem:last-child {
+            border-bottom: none;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tags">
+            <h2>Tags</h2>
+            <div class="tag" onclick="showProblems('Arrays')">Arrays</div>
+            <div class="tag" onclick="showProblems('Bit Manipulation')">Bit Manipulation</div>
+            <div class="tag" onclick="showProblems('Dynamic Programming')">Dynamic Programming</div>
+            <div class="tag" onclick="showProblems('Graph')">Graph</div>
+            <div class="tag" onclick="showProblems('Interval')">Interval</div>
+            <div class="tag" onclick="showProblems('Linked List')">Linked List</div>
+            <div class="tag" onclick="showProblems('Matrix')">Matrix</div>
+            <div class="tag" onclick="showProblems('String')">String</div>
+            <div class="tag" onclick="showProblems('Binary Trees')">Binary Trees</div>
+        </div>
+        <div class="problems" id="problems">
+            <h2>Problems</h2>
+            <!-- Problems will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        const problemsData = [
+            {
+                title: "Two Sum",
+                link: "https://leetcode.com/problems/two-sum/description/",
+                tag: "Arrays"
+            },
+            {
+                title: "Sum of Two Integers",
+                link: "https://leetcode.com/problems/sum-of-two-integers/description/",
+                tag: "Bit Manipulation"
+            },
+            {
+                title: "Climbing Stairs",
+                link: "https://leetcode.com/problems/climbing-stairs/",
+                tag: "Dynamic Programming"
+            },
+            {
+                title: "Clone Graph",
+                link: "https://leetcode.com/problems/clone-graph/description/",
+                tag: "Graph"
+            },
+            {
+                title: "Insert Interval",
+                link: "https://leetcode.com/problems/insert-interval/description/",
+                tag: "Interval"
+            },
+            {
+                title: "Reverse Linked List",
+                link: "https://leetcode.com/problems/reverse-linked-list/description/",
+                tag: "Linked List"
+            },
+            {
+                title: "Remove Duplicates from Sorted Array",
+                link: "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
+                tag: "Matrix"
+            },
+            {
+                title: "Longest Substring Without Repeating Characters",
+                link: "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+                tag: "String"
+            },
+            {
+                title: "Maximum Depth of Binary Tree",
+                link: "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+                tag: "Binary Trees"
+            }
+        ];
+
+        function showProblems(tag) {
+            const problemsContainer = document.getElementById("problems");
+            problemsContainer.innerHTML = ''; // Clear previous problems
+
+            problemsData.forEach(problem => {
+                if (problem.tag === tag) {
+                    const problemElement = document.createElement('div');
+                    problemElement.classList.add('problem');
+                    problemElement.innerHTML = `
+                    <p>Tag: ${problem.tag}</p>
+                        <h3><a href="${problem.link}" target="_blank">${problem.title}</a></h3>
+                       
+                    `;
+                    problemsContainer.appendChild(problemElement);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

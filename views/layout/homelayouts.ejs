@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProElevate</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* white background */
+        }
+        .navbar {
+            background-color: #ff7f00; /* orange navbar */
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ff9933; /* lighter shade of orange on hover */
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<%- include('../articles/navbar') %> <!-- Include navbar file -->
+
+<%- body %> <!-- This will be replaced by the specific content of each page -->
+
+<%- include('../articles/footer') %> <!-- Include footer file -->
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProElevate</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* white background */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .hero {
+            background-color: #f9f9f9;
+            padding: 40px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .cta-btn {
+            background-color: #ff7f00;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-right: 10px; /* Add margin between buttons */
+        }
+        .cta-btn:hover {
+            background-color: #ff9933;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 40px;
+        }
+        .feature {
+            text-align: center;
+        }
+        .feature img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Your existing navbar goes here -->
+
+    <div class="container">
+        <div class="hero">
+            <h2>Master Coding Skills with ProElevate</h2>
+            <p>Practice coding challenges, learn algorithms, and prepare for coding interviews.</p>
+            <button class="cta-btn" onclick="redirectToIndex()">Explore Now</button>
+            <button class="cta-btn" onclick="redirectToBlog()">Blog</button>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <img src="https://assets-global.website-files.com/62e8d2ea218fb738666892cd/63524b85fe2fe4446c1b0d33_A%20step%20by%20step%20guide%20to%20become%20a%20DSA%20expert-p-1080.webp" alt="Feature 1">
+                <h3>Extensive Problem Bank</h3>
+                <p>Access a wide range of coding problems for practice.</p>
+            </div>
+            <div class="feature">
+                <img src="https://echo360.com/wp-content/uploads/2022/04/6005d54152d91ad0a23e1fdd_Interactive-Learning-Header.jpg" alt="Feature 2">
+                <h3>Interactive Learning</h3>
+                <p>Learn through interactive coding challenges and quizzes.</p>
+            </div>
+            <div class="feature">
+                <img src="https://www.proideators.com/wp-content/uploads/2023/07/Digital-Career-Preparation-Course.jpg" alt="Feature 3">
+                <h3>Career Preparation</h3>
+                <p>Prepare for coding interviews and land your dream job.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ProElevate. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function redirectToIndex() {
+            // Redirect to index page
+            window.location.href = '/problems'; // Adjust the path as needed
+        }
+        function redirectToBlog() {
+            // Redirect to blog page
+            window.location.href = '/index'; // Adjust the path as needed
+        }
+    </script>
+</body>
+
+</html>
